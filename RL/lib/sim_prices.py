@@ -30,8 +30,8 @@ def make_prices(mu, sigma, rf, utes, M, dt, X0, B0,S0, u_star, num_sims=300000):
     S[0] = S0
     for t in range(1, M+1):
         z = np.random.standard_normal(I)
-        df = 10 
-        z = np.random.standard_t(df,I)
+        #df = 10 
+        #z = np.random.standard_t(df,I)
         S[t] = S[t-1]*np.exp((mu-0.5*sigma**2)*dt + sigma*math.sqrt(dt)*z)
         B[t] = B[t-1]*np.exp(rf*dt)
 

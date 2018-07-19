@@ -89,8 +89,8 @@ class Market(object):
     
     for t in range(1, M+1):
         z = np.random.standard_normal(I)
-        df = 10
-        z = np.random.standard_t(df,I)
+        #df = 10
+        #z = np.random.standard_t(df,I)
         S[t] = S[t-1]*np.exp((mu-0.5*sigma**2)*dt + sigma*math.sqrt(dt)*z)
         B[t] = B[t-1]*np.exp(r*dt)
 
